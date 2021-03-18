@@ -19,10 +19,15 @@ class DonutMaker{
     }
     
     addAutoClicker(){
-        this._autoClickerCount++;
-        this._donutCount -= this._autoClickerCost;
-        this._autoClickerCost * (1 + (this._autoClickerCost * .10));
+        if (this._donutCount < 100){
+            this._autoClickerCount
+        }
+        else{
+            this._autoClickerCount++;
+            this._donutCount -= this._autoClickerCost;
+            this._autoClickerCost * (1 + (this._autoClickerCost * .10));
+        }
     }
 
-    
+
 }
