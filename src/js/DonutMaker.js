@@ -29,5 +29,7 @@ class DonutMaker{
         }
     }
 
-
+    activateAutoClicker(){
+        setInterval()
+    }
 }
