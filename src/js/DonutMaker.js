@@ -6,30 +6,45 @@ class DonutMaker{
 
     }
 
-    getDonutCount(){
+    GetDonutCount(){
         return this._donutCount;
     }
 
-    addDonut(){
+    AddDonut(){
         this._donutCount++;
     }
 
-    getAutoClickerCount(){
+    GetAutoClickerCount(){
         return this._autoClickerCount;
     }
     
-    addAutoClicker(){
-        if (this._donutCount < 100){
-            this._autoClickerCount
-        }
-        else{
-            this._autoClickerCount++;
-            this._donutCount -= this._autoClickerCost;
-            this._autoClickerCost * (1 + (this._autoClickerCost * .10));
-        }
+    GetAutoClickerCost(){
+        return this._autoClickerCost;
     }
 
-    activateAutoClicker(){
-        setInterval()
-    }
+    AddAutoClicker(){
+        if (this._donutCount >= this._autoClickerCost){
+        this._autoClickerCount++;
+        this._donutCount -= this._autoClickerCost;
+        this._autoClickerCost+=(this._autoClickerCost*.10);
+    };
+    
+    let autoMakeDonut = SetInterval(ActivateAutoClickers(), 1000);//I know this needs to be somewhere, but I'm not sure where
+    
+};
+
+ActivateAutoClickers(){
+    let i = 0
+    for(i = 0; i < this._autoClickerCount; i++){
+        this.AddDonut();
+    };    
+        //for loop call on add donut for every auto clicker
+    };
+
+
+
+
+
+
+    
 }
