@@ -10,5 +10,11 @@ autoBakerCost.innerText = "Current AutoBaker\u2122 cost: " + myShop._autoClicker
 let autoBakerCounter = document.getElementById('ClickerCount');
 autoBakerCounter.innerText = "AutoBakers\u2122 owned: " + myShop._autoClickerCount;
 
+let multiplierCost = document.getElementById('MultiplierCost');
+multiplierCost.innerText = "Current Multiplier cost: " + myShop._donutMultiplierCost;
+
+let multiplierCounter = document.getElementById('MultiplierCount');
+multiplierCounter.innerText = "Multipliers owned: " + myShop._donutMultiplierCount;
+
 
 
