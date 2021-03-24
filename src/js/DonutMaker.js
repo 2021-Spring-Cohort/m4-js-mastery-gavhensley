@@ -47,6 +47,7 @@ class DonutMaker{
         if (this._donutCount >= this._donutMultiplierCost){
             this._donutMultiplierCount++;
             this._donutCount -= this._donutMultiplierCost;
+            this._donutMultiplierCost+=(this._donutMultiplierCost*.10);
         }
     }
     
