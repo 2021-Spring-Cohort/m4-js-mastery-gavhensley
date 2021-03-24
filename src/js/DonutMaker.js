@@ -14,7 +14,12 @@ class DonutMaker{
     }
 
     AddDonut(){
-        this._donutCount++;
+        if (this._donutMultiplierCost == 0){
+            this._donutCount++;
+        }
+        else{
+            this._donutCount+=Math.pow(1.2, this._donutMultiplierCount);
+        }
     }
 
     GetAutoClickerCount(){
@@ -38,9 +43,7 @@ class DonutMaker{
     ActivateAutoClickers(){
         let i = 0
         for(i = 0; i < this._autoClickerCount; i++){
-            this.AddDonut();
-        }
-            //for loop call on add donut for every auto clicker
+            this.AddDonut();}
         }
     
     AddDonutMultiplier(){
