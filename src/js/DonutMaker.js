@@ -3,6 +3,9 @@ class DonutMaker{
         this._donutCount = 0;
         this._autoClickerCount = 0;
         this._autoClickerCost = 100;
+        this._donutMultiplierCount = 0;
+        this._donutMultiplierCost = 10;
+        let autoMakeDonut = undefined;//I know this needs to be somewhere, but I'm not sure where
 
     }
 
@@ -11,7 +14,12 @@ class DonutMaker{
     }
 
     AddDonut(){
-        this._donutCount++;
+        if (this._donutMultiplierCost == 0){
+            this._donutCount++;
+        }
+        else{
+            this._donutCount+=Math.pow(1.2, this._donutMultiplierCount);
+        }
     }
 
     GetAutoClickerCount(){
@@ -27,24 +35,28 @@ class DonutMaker{
         this._autoClickerCount++;
         this._donutCount -= this._autoClickerCost;
         this._autoClickerCost+=(this._autoClickerCost*.10);
-    };
+        if (this.autoMakeDonut == undefined){
+            this.autoMakeDonut = setInterval(this.ActivateAutoClickers, 1000);}
+        }
+    }
+
+    ActivateAutoClickers(){
+        let i = 0
+        for(i = 0; i < this._autoClickerCount; i++){
+            this.AddDonut();}
+        }
     
-    let autoMakeDonut = SetInterval(ActivateAutoClickers(), 1000);//I know this needs to be somewhere, but I'm not sure where
+    AddDonutMultiplier(){
+        if (this._donutCount >= this._donutMultiplierCost){
+            this._donutMultiplierCount++;
+            this._donutCount -= this._donutMultiplierCost;
+            this._donutMultiplierCost+=(this._donutMultiplierCost*.10);
+        }
+    }
     
-};
-
-ActivateAutoClickers(){
-    let i = 0
-    for(i = 0; i < this._autoClickerCount; i++){
-        this.AddDonut();
-    };    
-        //for loop call on add donut for every auto clicker
-    };
-
-
-
-
-
-
     
+    
+    
+        
 }
+
