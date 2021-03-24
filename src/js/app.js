@@ -1,4 +1,5 @@
 var myShop = new DonutMaker();
-console.log(myShop.GetDonutCount());
-myShop.ActivateAutoClickers();
-console.log(myShop.GetDonutCount());
+
+let counter = document.getElementById('DonutCounter');
+counter.innerText = "Donut count: " + myShop._donutCount;
+
