@@ -8,7 +8,21 @@
 <body>
     <header>
         <h2>DonutMaker by Gav</h2>
-        <button >About us</button>
+        <!-- About Us Modal -->
+        <button onclick="document.getElementById('aboutUs').style.display='block'" class="modal-button">About us</button>
+        <div id="aboutUs" class="modal">
+            <div class="modal-content">
+                <div class="container">
+                    <span onclick="document.getElementById('aboutUs').style.display='none'" class="button-display-topright">&times;</span>
+                    <Header>
+                        <h3>About DonutMaker by Gav</h3>
+                    </Header>
+                    <main>
+                        <p>We started business when you opened this page. We will continue to make the highest quality donuts that a mouseclick can accomplish. We hope to serve you for as long as you have this browser open. Thank you for using the DonutMaker by Gav!</p>
+                    </main>
+                </div>
+            </div>
+        </div>
         
         <button type="button"><a href="https://cookie-clicker.co/" target="_blank">Our inspiration: Cookie Clicker</a></button>
 
