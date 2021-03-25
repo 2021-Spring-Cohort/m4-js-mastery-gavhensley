@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/style.css">
     <title>Module 4 Project</title>
 </head>
 <body>
@@ -16,14 +17,16 @@
         <!-- About Us Modal -->
         <div id="aboutUs" class="modal">
             <div class="modal-content">
-                <div class="container">
-                    <span onclick="document.getElementById('aboutUs').style.display='none'" class="button-display-topright">&times;</span>
-                    <Header>
-                        <h3>About DonutMaker by Gav</h3>
-                    </Header>
-                    <main>
-                        <p>We started business when you opened this page. We will continue to make the highest quality donuts that a mouseclick can accomplish. We hope to serve you for as long as you have this browser open. Thank you for using the DonutMaker by Gav!</p>
-                    </main>
+                <div class="modal-container">
+                    <span onclick="document.getElementById('aboutUs').style.display='none'" class="button-display-topright">X</span>
+                    <div>
+                        <header class="modal-header">
+                            <h3>About DonutMaker by Gav</h3>
+                        </header>
+                        <main>
+                            <p>We started business when you opened this page. We will continue to make the highest quality donuts that a mouseclick can accomplish. We hope to serve you for as long as you have this browser open. Thank you for using the DonutMaker by Gav!</p>
+                        </main>
+                    </div>
                 </div>
             </div>
         </div>
@@ -31,9 +34,9 @@
         <!--About Gav Modal-->
         <div id="aboutGav" class="modal">
             <div class="modal-content">
-                <div class="container">
-                    <span onclick="document.getElementById('aboutGav').style.display='none'" class="button-display-topright">&times;</span>
-                    <Header>
+                <div class="modal-container">
+                    <span onclick="document.getElementById('aboutGav').style.display='none'" class="button-display-topright">X</span>
+                    <Header class="modal-header">
                         <h3>About Gav</h3>
                     </Header>
                     <main>
@@ -57,13 +60,16 @@
             <p id="ClickerDescription">With our patented AutoBaker&trade; system, our automated ovens will make donuts with us! We will need to sell some of our donuts in order to get one though.</p>
             <p id="ClickerCost"></p>
             <p id="ClickerCount"></p>
-            <button type="button">Buy an AutoBaker&trade;</button>
+            <button id="autoBtn" type="button">Buy an AutoBaker&trade;</button>
         </section>
         <section id="Multipliers">
             <p>We can be more efficient and make more donuts to feed the good people! We just need to sell some donuts to buy an over add-on called a Multiplier to make more donuts with every click!</p>
             <p id="MultiplierCost"></p>
             <p id="MultiplierCount"></p>
-            <button type="button">Buy a Multiplier</button>
+            <button id="multBtn" type="button">Buy a Multiplier</button>
+        </section>
+        <section id="reset">
+            <button id=resetBtn type="button">Reset!</button>
         </section>
     </main>
     <div class="container">
