@@ -14,7 +14,7 @@ class DonutMaker{
     }
 
     AddDonut(){
-        if (this._donutMultiplierCost == 0){
+        if (this._donutMultiplierCount = 0){
             this._donutCount++;
         }
         else{
