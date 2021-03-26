@@ -1,0 +1,32 @@
+.modal{
+    display: none;
+}
+
+.modal-container{
+    border-style: solid;
+    padding-top: -3rem;
+    margin-top: 1rem;
+    
+}
+
+.modal-container main{
+    padding-left: 1rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+}
+
+.button-display-topright{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    background-color: aqua;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: oblique;
+    padding: 7px;
+
+}
+
+.button-display-topright:hover{
+    cursor: pointer;
+}
