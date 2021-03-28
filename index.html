@@ -3,12 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/style.css">
     <title>Module 4 Project</title>
 </head>
 <body>
+    <header>
+        <!--Buttons-->
+        <h2>DonutMaker by Gav</h2>
+        <button onclick="document.getElementById('aboutUs').style.display='block'" class="modal-button">About us</button>
+        <button onclick="document.getElementById('aboutGav').style.display='block'" class="modal-button">About Gav</button>
+        <button type="button" id="CookieClickerButton"><a href="https://cookie-clicker.co/" target="_blank">Our inspiration: Cookie Clicker</a></button>
+        
+        <!-- About Us Modal -->
+        <div id="aboutUs" class="modal">
+            <div class="modal-content">
+                <div class="modal-container">
+                    <span onclick="document.getElementById('aboutUs').style.display='none'" class="button-display-topright">X</span>
+                    <div>
+                        <header class="modal-header">
+                            <h3>About DonutMaker by Gav</h3>
+                        </header>
+                        <main>
+                            <p>We started business when you opened this page. We will continue to make the highest quality donuts that a mouseclick can accomplish. We hope to serve you for as long as you have this browser open. Thank you for using the DonutMaker by Gav!</p>
+                        </main>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--About Gav Modal-->
+        <div id="aboutGav" class="modal">
+            <div class="modal-content">
+                <div class="modal-container">
+                    <span onclick="document.getElementById('aboutGav').style.display='none'" class="button-display-topright">X</span>
+                    <Header class="modal-header">
+                        <h3>About Gav</h3>
+                    </Header>
+                    <main>
+                        <p>Gavin is a developer and sound enthusiast out of Cleveland, OH. For more information, please visit the following links:</p>
+                        <a href="https://gavhensley.github.io/" target="_blank">Portfolio</a>
+                        <br />
+                        <a href="https://github.com/gavhensley" target="_blank">GitHub Profile</a>
+                    </main>
+                </div>
+            </div>
+        </div>
+        
+
+    </header>
+    <hr />
+    <main>
+        <section id="Donuts">
+            <p id="DonutCounter"></p>
+            <button id="DonutButton" type="button">Make a donut!</button>
+        </section>
+        <section id="Clickers">
+            <p id="ClickerDescription">With our patented AutoBaker&trade; system, our automated ovens will make donuts with us! We will need to sell some of our donuts in order to get one though.</p>
+            <p id="ClickerCost"></p>
+            <p id="ClickerCount"></p>
+            <button id="autoBtn" type="button">Buy an AutoBaker&trade;</button>
+        </section>
+        <section id="Multipliers">
+            <p>We can be more efficient and make more donuts to feed the good people! We just need to sell some donuts to buy an over add-on called a Multiplier to make more donuts with every click!</p>
+            <p id="MultiplierCost"></p>
+            <p id="MultiplierCount"></p>
+            <button id="multBtn" type="button">Buy a Multiplier</button>
+        </section>
+        <hr />
+        <section id="reset">
+            <button id=resetBtn type="button">Reset!</button>
+        </section>
+    </main>
     <div class="container">
         <div class="anchor"></div>
     </div>
-    <script src="/src/app.js"></script>
+    <script src="./src/js/DonutMaker.js"></script>
+    <script src="./src/js/app.js"></script>
 </body>
 </html>
